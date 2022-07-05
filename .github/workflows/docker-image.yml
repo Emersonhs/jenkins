@@ -38,7 +38,7 @@ jobs:
         script: ls
 
     - name: Open Web Client Directory
-      working-directory: /home/runner/work/jenkins/docker
+      working-directory: /home/runner/work/jenkins/jenkins
       run: |
           ls -la
 
