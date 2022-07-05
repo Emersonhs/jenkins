@@ -37,6 +37,11 @@ jobs:
         # PowerShell script to execute in Actions-hydrated context
         script: ls
 
+    - name: Open Web Client Directory
+      working-directory: /home/runner/work/jenkins/
+      run: |
+          ls -la
+
     - name: Build, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
