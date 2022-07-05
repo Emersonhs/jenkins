@@ -48,6 +48,6 @@ jobs:
         ECR_REPOSITORY: jenkins
         IMAGE_TAG: latest
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f /home/runner/work/jenkins/jenkins/ .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         ls -la
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f /home/runner/work/jenkins/jenkins/
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
